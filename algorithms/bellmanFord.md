@@ -10,7 +10,7 @@ You are also given three integers `src`, `dst`, and `k`. Return the cheapest pri
 
 ## Solution
 
-``
+```
   from typing import List
   def findCheapestPrice(n: int, flights: List[List  [int]], src: int, dst: int, k: int):
           prices=[float('inf')]*n
@@ -29,7 +29,8 @@ You are also given three integers `src`, `dst`, and `k`. Return the cheapest pri
               return prices[dst]
   solution=findCheapestPrice( n = 4, flights = [[0,1,  100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], src   = 0, dst = 3, k = 1)
   print (solution)
-``
+
+```
 ## Explaination 
 
 **Initialization:** Create a list prices to store the minimum cost to reach each city, initialized to infinity. Set the cost to reach the source city src to 0.

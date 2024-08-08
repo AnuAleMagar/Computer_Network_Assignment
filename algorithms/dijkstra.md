@@ -10,7 +10,7 @@ We will send a signal from a given node `k`. Return the minimum time it takes fo
 
 ## Solution
 
-``
+```
   import heapq
   from typing import List
   import collections
@@ -38,7 +38,7 @@ We will send a signal from a given node `k`. Return the minimum time it takes fo
   solution=networkDelayTime([[2,1,1],[2,3,1],[3,4,1],  [3,2,1],[1,5,2]], 5,3)
   print (solution)
   
-``
+```
 ## Explaination
 
 **Graph Representation:** Use a dictionary to represent the graph, where each key is a node and the value is a list of tuples representing the neighboring nodes and the travel time to them.

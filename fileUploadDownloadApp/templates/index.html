@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="center">
+        <h1> Uploading and Returning Files With a Database in Flask </h1>
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <input class="ok" type="file" name="file">
+            <button class="op">Submit</button>
+        </form>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        <h2>Uploaded Files</h2>
+        <ul>
+            {% for upload in uploads %}
+            <li>
+                {{ upload.filename }} 
+                <a href="{{ url_for('download', upload_id=upload.id) }}">Download</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
